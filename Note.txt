@@ -1,0 +1,24 @@
+Reusable Create & Edit Form in React (React Hook Form, Zod)
+(https://www.youtube.com/watch?v=_XQ_9qaQsQU)
+
+https://github.com/cosdensolutions/code/blob/master/videos/long/reusable-create-edit-form
+https://github.com/Annie-Huang/react-hook-form-with-zod-reusable-create-edit-form
+
+-----------------------------------------------------------------------------------------------------
+
+PS C:\react> npm create vite@latest react-hook-form-with-zod-reusable-create-edit-form -- --template react-ts
+
+> npx
+> create-vite react-hook-form-with-zod-reusable-create-edit-form --template react-ts
+
+
+Scaffolding project in C:\react\react-hook-form-with-zod-reusable-create-edit-form...
+
+Done. Now run:
+
+  cd react-hook-form-with-zod-reusable-create-edit-form
+  npm install
+  npm run dev
+
+PS C:\react>
+
