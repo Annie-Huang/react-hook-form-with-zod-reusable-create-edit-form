@@ -23,3 +23,7 @@ Done. Now run:
 
 PS C:\react>
 
+---------------------------------------------
+
+PS C:\react\react-hook-form-with-zod-reusable-create-edit-form> npm i --save-dev unplugin-fonts
+PS C:\react\react-hook-form-with-zod-reusable-create-edit-form> npm install --save path
