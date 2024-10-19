@@ -47,10 +47,17 @@ export default function UserForm({ user }: UserFormProps) {
   });
 
   async function onSubmit(data: FormValues) {
-    await fetch('/api/users', {
-      method: 'POST',
-      body: JSON.stringify(data),
-    });
+    if (user) {
+      await fetch(`/api/users/${user.id}`, {
+        method: 'PATCH',
+        body: JSON.stringify(data),
+      });
+    } else {
+      await fetch('/api/users', {
+        method: 'POST',
+        body: JSON.stringify(data),
+      });
+    }
   }
 
   return (
