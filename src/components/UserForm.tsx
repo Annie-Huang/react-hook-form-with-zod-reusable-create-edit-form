@@ -33,6 +33,16 @@ type UserFormProps = {
 
 export default function UserForm({ user }: UserFormProps) {
   const { register, setValue, handleSubmit } = useForm<FormValues>({
+    defaultValues: user
+      ? {
+          // Don't want to pass all properties, e.g. id,
+          birthday: user.birthday,
+          firstName: user.firstName,
+          lastName: user.lastName,
+          email: user.email,
+          role: user.role,
+        }
+      : undefined,
     resolver: zodResolver(formSchema),
   });
 
@@ -52,6 +62,7 @@ export default function UserForm({ user }: UserFormProps) {
         <Input {...register('lastName')} placeholder='Last name' />
         <Input {...register('email')} placeholder='Email' />
         <DatePicker
+          defaultValue={user ? user.birthday : undefined}
           onChange={(date) => {
             if (date) {
               setValue('birthday', date);
@@ -59,6 +70,7 @@ export default function UserForm({ user }: UserFormProps) {
           }}
         />
         <Select
+          defaultValue={user ? user.role : undefined}
           onValueChange={(value: FormValues['role']) => setValue('role', value)}
         >
           <SelectTrigger className='w-[180px]'>
